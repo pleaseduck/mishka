@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Вязание на заказ</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav">
+        <div class="site-logo" width="86" height="35"></div>
+        <ul class="main-nav__list">
+          <li class="main-nav__list__item"><a href="#">Каталог товаров</a></li>
+          <li class="main-nav__list__item"><a href="#">Вязание на заказ</a></li>
+          <li class="main-nav__list__item  main-nav__list__item--search"><a href="#">Поиск по сайту</a></li>
+          <li class="main-nav__list__item  main-nav__list__item--basket"><a href="#" class="empty-backet">Корзина:пока пуста</a></li>
+        </ul>
+      </nav>
+      <div class="extra-nav--form">
+        <h2 class="extra-nav__title">Вязание на заказ</h2>
+      </div>
+    </header>
+    <main>
+      <p class="form-description">
+        Мы будем рады вопролить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+      <form action="post" class="order-form">
+        <fieldset class="order-form__type">
+          <legend>Тип</legend>
+          <input type="radio" class="order-form__radio" id="radio-1">
+          <label for="radio-1">Аксессуар для интерьера</label>
+          <input type="radio" class="order-form__radio" id="radio-2">
+          <label for="radio-2">Детская игрушка</label>
+        </fieldset>
+        <fieldset class="order-form__color">
+          <legend>Цвет</legend>
+          <input type="checkbox" id="check-1">
+          <label for="check-1">Белый</label>
+          <input type="checkbox" id="check-2">
+          <label for="check-2">Серый</label>
+          <input type="checkbox" id="check-3">
+          <label for="check-3">«Тиффани»</label>
+          <input type="checkbox" id="check-4">
+          <label for="check-4">Черный</label>
+          <input type="checkbox" id="check-5">
+          <label for="check-5">Розовый</label>
+          <input type="checkbox" id="check-6">
+          <label for="check-6">Оранжевый</label>
+        </fieldset>
+        <fieldset class="order-form__initials">
+          <legend>ФИО</legend>
+          <label for="surname">Фамилия:</label>
+          <input type="text" placeholder="Укажите фамилию" id="surname">
+          <label for="name">Имя:</label>
+          <input type="text" placeholder="Введите ваше имя" id="name">
+          <label for="patronymic">Отчество:</label>
+          <input type="text" placeholder="Отчество,если желаете" id="patronymic">
+        </fieldset>
+        <fieldset class="order-form__tel">
+          <legend>Тел</legend>
+          <input type="tel" placeholder="+7 XXX XX XX">
+        </fieldset>
+        <fieldset class="order-form__mail">
+          <legend>E-mail</legend>
+          <input type="tel" placeholder="Ваш e-mail">
+        </fieldset>
+        <fieldset class="order-form__extra-text">
+          <legend>Доп</legend>
+          <textarea name="Доп"  cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+        <input type="submit" class="btn">
+      </form>
+    </main>
+    <footer class="page-footer">
+      <div class="site-logo" width="86" height="35"></div>
+      <div class="page-footer__social">
+        <a href="#" class="social social--inst" width="23" height="30">Inst</a>
+        <a href="#" class="social social--fb" width="13" height="30">fb</a>
+        <a href="#" class="social socil--twitter" width="13" height="30">Twitter</a>
+      </div>
+      <div class="design">Дизайн</div>
+    </footer>
+  </body>
+</html>

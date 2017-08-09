@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
     watch: {
       style: {
-        files: ["less/style.less"], //less/**/*.less
+        files: ["less/**/*.less"], //less/**/*.less less/style.less
         tasks: ["less", "postcss"]
       }
     },

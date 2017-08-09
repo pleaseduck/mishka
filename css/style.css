@@ -1,0 +1,160 @@
+.main-nav {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.main-nav__list {
+  list-style-type: none;
+}
+.main-nav__list__item a {
+  color: black;
+  text-decoration: none;
+}
+.extra-nav {
+  background-image: url(../img/hero-mobile.svg);
+}
+.extra-nav__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+}
+.extra-nav__item {
+  color: white;
+}
+.extra-nav__item--interior {
+  background-color: #63d1bb;
+}
+.extra-nav__item--toys {
+  background-color: #56c3b2;
+}
+.extra-nav--catalog {
+  background-color: #f1f1f1;
+}
+.site-logo {
+  width: 86px;
+  height: 35px;
+  background-image: url("../img/mishka-logo-mobile.svg");
+}
+.site-logo--mobile-hidden {
+  display: none;
+}
+.special-offer__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+}
+.special-offer__marker {
+  color: #78d7c4;
+  line-height: 16px;
+}
+.special-offer__description,
+.special-offer__characteristics {
+  color: #444444;
+  font-size: 14px;
+  line-height: 24px;
+}
+.special-offer__characteristics {
+  line-height: 20px;
+}
+.special-offer__price {
+  font-family: Verdana;
+  color: #444444;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.advantages__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+}
+.feedback__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+}
+.feedback__post__content {
+  color: #444444;
+  font-size: 14px;
+  line-height: 24px;
+}
+.feedback__post__author__author-name {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+}
+.feedback__post__author__author-inst {
+  font-style: normal;
+  color: #444444;
+  text-decoration: none;
+}
+.contacts__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+}
+.contacts__info {
+  color: #444444;
+  font-size: 14px;
+  line-height: 24px;
+}
+.contacts__info a {
+  color: #444444;
+  text-decoration: none;
+}
+.product-article__title {
+  font-family: Verdana;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.product-article__price {
+  font-family: Verdana;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+.product-article__description {
+  color: #444444;
+  font-size: 14px;
+  line-height: 24px;
+}
+.order-form__description {
+  color: #444444;
+  font-size: 14px;
+  line-height: 24px;
+}
+.order-form {
+  font-family: 'Open Sans', sans-serif;
+}
+.order-form fieldset {
+  border: none;
+}
+.order-form legend {
+  color: #62d1ba;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.order-form label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: black;
+  font-weight: bold;
+}

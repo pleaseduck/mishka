@@ -16,7 +16,39 @@
   margin:0;
 }
 .content-text-default() {
+  font-family:@font-family-default;
   color: @grey-for-text;
   font-size: 14px;
   line-height: @font-lineheight-default;
+}
+.btn() {
+  .font-default;
+  border:2px solid #444444;
+  line-height: 16px;
+  font-weight: bold;
+  color: @grey-for-text;
+  text-decoration: none;
+  padding-top:15px;
+  padding-bottom:18px;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #444444;
+    color: white;
+  }
+  &:active {
+    background-color: #444444;
+    color: #757575;
+  }
+}
+.social {
+  display: block;
+  width: 23px;
+  height: 30px;
+  background-color: #f1f1f1;
+    margin-right: 40px;
+    &:last-of-type {
+    margin-right:0;
+    }
 }

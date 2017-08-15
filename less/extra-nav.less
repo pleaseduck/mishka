@@ -1,11 +1,24 @@
+
 .extra-nav {
-  background-image:url(../img/hero-mobile.svg);
+  padding-top:90px;
 }
 .extra-nav__title {
   .title-default;
+  box-sizing: border-box;
+  width:81%;
+  margin:0 auto;
+  text-align: center;
+  margin-bottom:130px;
+  padding:0 70px;
+  min-height:210px;
 }
 .extra-nav__item {
+  .font-default;
+  font-size: 18px;
   color: white;
+  padding: 30px;
+  font-weight: bold;
+
 }
 .extra-nav__item--interior {
   background-color: #63d1bb;
@@ -15,4 +28,17 @@
 }
 .extra-nav--catalog {
   background-color: #f1f1f1;
+}
+@media (min-width: 768px) {
+  .extra-nav__title {
+    margin-bottom: 365px;
+    margin-top:75px;
+    font-size: 50px;
+    line-height: 57px;
+  }
+  .extra-nav__item {
+    width:50%;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+}
 }

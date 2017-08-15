@@ -1,12 +1,201 @@
 .main-nav {
   .font-default();
-  font-weight:700;
+  font-weight: 700;
+  width:100%
 }
 .main-nav__list {
 list-style-type: none;
+padding: 0;
+margin: 0;
 }
 
-.main-nav__list__item a {
-  color:black;
-  text-decoration:none;
+.main-nav__list__item a, .main-nav__logo {
+  color: black;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border: 1px solid #ececec;
+  text-align: center;
+}
+.main-nav__list__item span {
+  color: #838383;
+  text-decoration: none;
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+.main-nav__logo {
+  border: 0px solid black;
+  position: relative;
+  padding: 0;
+  text-align: left;
+  padding-top:22px;
+}
+.main-nav__logo a {
+  position: relative;
+}
+
+
+.main-nav__list__item a[href]:hover {
+color: #8d8d8d;
+}
+.main-nav__list__item a[href]:active {
+  color: #cacaca;
+}
+@media (max-width: 768px) {
+  .main-nav__menu-closer {
+    position: absolute;
+    width: 21px;
+    height: 20px;
+    right: 30px;
+    top: 35px;
+  }
+  .main-nav__logo {
+    border: 0px solid black;
+    position: relative;
+    padding-top:22px;
+    text-align: center;
+    padding-bottom:22px;
+  }
+  .main-nav--closed .main-nav__menu-closer:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    width: 21px;
+    height:2px;
+    background-color: black;
+    box-shadow:
+    0 5px 0 black,
+    0 10px 0 black;
+  }
+  .main-nav--opened .main-nav__menu-closer::after, .main-nav--opened .main-nav__menu-closer::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    width: 21px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+  .main-nav--opened .main-nav__menu-closer::before {
+      transform: rotate(-45deg);
+  }
+  .main-nav--closed a[href] {
+  display:none;
+  }
+  .main-nav--closed {
+    border: 1px solid #ececec;
+  }
+  .main-nav--opened {
+    border-bottom: 0px solid #ececec;
+  }
+  .main-nav--opened a[href] {
+  display:block;
+  }
+  .main-nav__list__item--mobile-hidden {
+    display:none;
+  }
+}
+@media (min-width: 768px) {
+  .main-nav {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border:0px solid black;
+    width: 87%;
+    margin: 0 auto;
+    max-height: 90px;
+  }
+  .main-nav__logo {
+    display: block;
+    box-sizing: border-box;
+    width: 113px;
+    height: 90px;
+    order: -1;
+    flex-basis: 50%;
+    border-bottom: 1px solid #ececec;
+  }
+.group-1, .group-2, .group-3 {
+  display: flex;
+}
+  .group-1 {
+    order:2;
+    width:50%;
+  }
+  .group-1 .main-nav__list__item, .group-3 .main-nav__list__item:first-of-type {
+    padding-right:35px;
+  }
+  .group-2 {
+    order: 1;
+    width:50%;
+    justify-content: flex-end;
+    border-bottom: 1px solid #ececec;
+  }
+    .group-2 .main-nav__list__item {
+      border-left:1px solid #ececec;
+    }
+    .group-2 .main-nav__list__item:last-of-type {
+      padding-left:80px;
+    }
+  .group-4 {
+    order: 3;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+  }
+  .main-nav__list__item a, .main-nav__logo {
+    display: inline-block;
+  }
+  .main-nav__list__item a {
+    border-width: 0;
+  }
+  .main-nav__list__item--tablet-hidden {
+    display:none;
+  }
+   .main-nav__list__item--search {
+     font-size:0;
+     width:83px;
+   }
+}
+@media (min-width: 1150px) {
+  .main-nav__list__item--tablet-hidden, .main-nav__list__item--mobile-hidden {
+    display:block;
+  }
+  .group-1 {
+    order: -1;
+    width: 37%;
+    max-height:90px;
+      border-bottom: 1px solid #ececec;
+  }
+  .group-1 .main-nav__list__item {
+    border-right: 1px solid #ececec;
+  }
+  .group-1 .main-nav__list__item:last-of-type {
+    padding-right: 0;
+    padding-left: 35px;
+    border-width: 0;
+  }
+  .main-nav__logo {
+    order: 0;
+    flex-basis: 30%;
+    border-bottom: 1px solid #ececec;
+    text-align: center;
+  }
+  .group-2 {
+    order: 1;
+    width: 33%;
+  }
+.group-3 {
+  order: 2;
+  width:50%;
+  display: flex;
+  justify-content: flex-start;
+}
+
 }

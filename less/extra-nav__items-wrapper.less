@@ -1,0 +1,18 @@
+@media (min-width: 768px) {
+  .extra-nav__items-wrapper {
+    display: flex;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: white;
+    &::after {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 35px;
+      background-image: url("../img/zigzag-border.svg");
+      bottom:-1px;
+      left:0;
+  }
+    }
+}

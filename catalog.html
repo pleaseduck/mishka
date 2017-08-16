@@ -9,18 +9,23 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="main-nav-wrapper">
-        <nav class="main-nav">
-          <div class="site-logo" width="86" height="35"></div>
-          <ul class="main-nav__list">
-            <li class="main-nav__list__item"><a href="#">Каталог товаров</a></li>
-            <li class="main-nav__list__item"><a href="#">Вязание на заказ</a></li>
-            <li class="main-nav__list__item  main-nav__list__item--search"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__list__item  main-nav__list__item--basket"><a href="#" class="empty-backet">Корзина:пока пуста</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="extra-nav-wrapper">
+      <nav class="main-nav  main-nav--closed">
+         <div class="main-nav__logo"><a class="site-logo active"><img src="img/mishka-logo-mobile.svg" alt=""></a><span class="main-nav__menu-closer"></span></div>
+       <div class="group-1">
+         <div class="main-nav__list__item"><a href="#">Каталог товаров</a></div>
+         <div class="main-nav__list__item"><a href="#">Вязание на заказ</a></div>
+       </div>
+       <div class="main-nav__list__item main-nav__list__item--mobile-hidden  group-4"><span>Бесплатная доставка по россии</span></div>
+       <div class="group-2">
+         <div class="main-nav__list__item main-nav__list__item--search"><a href="#">Поиск по сайту</a></div>
+         <div class="main-nav__list__item main-nav__list__item--basket"><a href="#" class="backet-empty">Корзина:пока пуста</a></div>
+       </div>
+       <div class="group-3">
+         <div class="main-nav__list__item  main-nav__list__item--mobile-hidden  main-nav__list__item--tablet-hidden"><a href="#">Новые поступления</a></div>
+         <div class="main-nav__list__item  main-nav__list__item--mobile-hidden  main-nav__list__item--tablet-hidden"><a href="#">Распродажа</a></div>
+       </div>
+      </nav>
+      <div class="extra-nav-wrapper extra-nav-wrapper--catalog">
         <div class="extra-nav--catalog">
           <h2 class="extra-nav__title">Каталог товаров</h2>
         </div>
@@ -30,30 +35,45 @@
       <div class="product-list">
         <article class="product-article">
           <div class="product-article__photo"><img src="img/rabbit-mobile.jpg" alt="Зайчик-попрыгайчик"></div>
+          <div class="product-article__content-wrapper">
           <h2 class="product-article__title">Зайчик-попрыгайчик</h2>
-          <span class="product-article__description">Рост 30 см, вес 200 г</span>
+          <span class="product-article__description">Рост 30 см, вес 200 г</span><br>
           <a href="#" class="product-article__price">1 200 руб.</a>
+        </div>
         </article>
         <article class="product-article">
           <div class="product-article__photo"><img src="img/basket-mobile.jpg" alt="Корзинка для белья"></div>
-          <h2 class="product-article__title">Корзинка для белья</h2>            <span class="product-article__description">Диаметр 15 см, высота 10 см</span>            <a href="#" class="product-article__price">690 руб.</a>
+          <div class="product-article__content-wrapper">
+          <h2 class="product-article__title">Корзинка для белья</h2>
+            <span class="product-article__description">Диаметр 15 см, высота 10 см</span> <br>
+            <a href="#" class="product-article__price">690 руб.</a>
+          </div>
         </article>
         <article class="product-article">
           <div class="product-article__photo"><img src="img/bigbasket-mobile.jpg" alt="Большая корзинка для игрушек"></div>
-          <h2 class="product-article__title">Большая корзинка для игрушек</h2>
-          <span class="product-article__description">Диаметри 30 см, высота 30 см</span>
+          <div class="product-article__content-wrapper">
+          <h2 class="product-article__title">Большая корзинка<br class="mobile-hidden"> для игрушек</h2>
+          <span class="product-article__description">Диаметри 30 см, высота 30 см</span><br>
           <a href="#" class="product-article__price">1 500 руб.</a>
+        </div>
         </article>
         </div>
       <div class="making-process">
-        <h2 class="making-process__title">Процесс производства</h2>
-        <video src="#" poster="img/process-video.png">
+        <div class="making-process__video  only-desktop-visible">
+        <video src="#" poster="img/video-mobile.svg">
         </video>
+        </div>
+        <div class="making-process__content-wrapper">
+        <h2 class="making-process__title">Процесс производства</h2>
+        <div class="making-process__video  only-desktop-hidden">
+        <video src="#" poster="img/video-mobile.svg">
+        </video>
+        </div>
         <p class="making-process__content">
           По просьбам наших любимых фоловверов мы сняли для вас подробное видео о том, как появляются наши товары
         </p>
         <a href="#" class="btn">Сделать заказ</a>
-      </div>
+        </div>
     </main>
     <footer class="page-footer">
       <div class="site-logo site-logo--mobile-hidden" width="86" height="35"></div>
@@ -65,4 +85,5 @@
       <div class="design">Дизайн</div>
     </footer>
   </body>
+    <script type="text/javascript" src="js/script.js"></script>
 </html>

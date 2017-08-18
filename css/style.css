@@ -245,7 +245,10 @@
     width: 83px;
   }
 }
-@media (min-width: 1150px) {
+@media (min-width: 1200px) {
+  .main-nav__logo {
+    padding-top: 15px;
+  }
   .main-nav__list__item--tablet-hidden,
   .main-nav__list__item--mobile-hidden {
     display: block;
@@ -285,17 +288,22 @@
   height: auto;
   background-image: url(../img/hero-mobile.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 580px) {
   .extra-nav-wrapper {
-    background-image: url(../img/hero-desktop.jpg);
+    background-image: url(../img/hero-tablet.jpg);
     background-size: cover;
     background-color: white;
   }
   .extra-nav-wrapper--catalog {
     background-color: #f1f1f1;
+  }
+}
+@media (min-width: 1050px) {
+  .extra-nav-wrapper {
+    background-image: url(../img/hero-desktop.jpg);
   }
 }
 .extra-nav {
@@ -483,6 +491,11 @@ display:inline-block;
   border-bottom: 1px solid #ececec;
   padding: 12px 0;
 }
+@media (min-width: 500px) {
+  .fspecial-offer::after {
+    height: 13px;
+  }
+}
 @media (min-width: 768px) {
   .desktop-hidden {
     display: none;
@@ -502,7 +515,7 @@ display:inline-block;
     bottom: -55px;
   }
   .special-offer br {
-    display: none;
+    display: block;
   }
   .special-offer__title {
     font-size: 40px;
@@ -520,7 +533,7 @@ display:inline-block;
     width: 48%;
     order: 2;
   }
-  .special-offer img {
+  .special-offer__image {
     width: 333px;
     height: 397px;
     padding: 0;
@@ -529,9 +542,8 @@ display:inline-block;
     order: 3;
     flex-grow: 0;
   }
-  .special-offer__price,
-  .special-offer .btn {
-    order: 5;
+  .special-offer__price {
+    margin-bottom: 10px;
   }
   .special-offer .btn {
     width: 87%;
@@ -565,6 +577,9 @@ display:inline-block;
     width: 60%;
     height: 57px;
     z-index: 2;
+  }
+  .special-offer__price {
+    margin-bottom: 5px;
   }
   .special-offer__content-wrapper {
     width: 33%;
@@ -702,7 +717,7 @@ display:inline-block;
   border-right: none;
 }
 @media (min-width: 500px) {
-  .special-offer::after {
+  .feedback::after {
     height: 13px;
   }
 }
@@ -908,11 +923,11 @@ display:inline-block;
 @media (min-width: 1050px) {
   .product-list {
     display: flex;
+    justify-content: space-around;
   }
 }
 .product-article {
-  width: 81%;
-  min-width: 260px;
+  width: 260px;
   margin: 0 auto;
   text-align: center;
   border: 1px solid #ededed;
@@ -941,7 +956,19 @@ display:inline-block;
   display: inline-block;
   padding: 25px 0;
   padding-right: 110px;
+  padding-left: 30px;
   min-width: 260px;
+  text-align: left;
+  position: relative;
+}
+.product-article__price::after {
+  content: " ";
+  position: absolute;
+  height: 1px;
+  width: 200px;
+  background-color: #ededed;
+  top: 0;
+  left: 30px;
 }
 .product-article__description {
   font-family: 'Open Sans', sans-serif;
@@ -949,35 +976,43 @@ display:inline-block;
   font-size: 14px;
   line-height: 24px;
   display: inline-block;
-  border-bottom: 1px solid #ededed;
   padding-bottom: 22px;
+  padding-left: 30px;
   text-align: left;
   min-width: 260px;
 }
 @media (min-width: 768px) {
   .product-article {
     margin: 0;
-    width: 87%;
+    width: 100%;
     text-align: left;
     display: flex;
     margin-bottom: 55px;
   }
   .product-article__content-wrapper {
     width: 50%;
+    max-height: 333px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin-left: auto;
+    padding-top: 15px;
   }
   .product-article__photo {
     max-width: 334px;
     max-height: 334px;
+    margin-bottom: 0;
   }
   .product-article__description {
     border-width: 0;
   }
+  .product-article__description,
+  .product-article__title {
+    padding-left: 30px;
+  }
   .product-article__price {
-    position: relative;
+    box-sizing: border-box;
+    margin-top: auto;
   }
   .product-article__price::after {
     content: " ";
@@ -986,22 +1021,33 @@ display:inline-block;
     width: 80%;
     background-color: #ededed;
     top: 0;
-    left: 10%;
+    left: 30px;
   }
 }
 @media (min-width: 1050px) {
   .product-article {
     display: block;
-    width: 30%;
-    margin-right: 50px;
+    width: 316px;
   }
-  .product-article:last-of-type {
-    margin-right: 0;
+  .product-article:nth-of-type(3) .product-article__description {
+    padding-bottom: 0;
+  }
+  .product-article__description,
+  .product-article__title {
+    padding-left: 30px;
+  }
+  .product-article__photo {
+    margin-bottom: 135px;
+  }
+  .product-article__price {
+    margin-top: auto;
+    vertical-align: bottom;
   }
   .product-article__content-wrapper {
     width: 100%;
-    display: block;
-    margin-left: 50px;
+    margin-bottom: 0;
+    padding: 0;
+    justify-content: flex-end;
   }
 }
 .order-form__description {
@@ -1048,15 +1094,14 @@ display:inline-block;
     left: 0;
   }
 }
-.only-desktop-visible {
-  display: none;
-}
-.only-desktop-hidden {
+.only-mobile-visible {
   display: block;
 }
+.only-mobile-hidden {
+  display: none;
+}
 .making-process {
-  width: 81%;
-  min-width: 260px;
+  width: 260px;
   box-sizing: border-box;
   margin: 0 auto;
   border: 1px solid #ececec;
@@ -1068,23 +1113,13 @@ display:inline-block;
   line-height: 24px;
   font-family: Verdana;
   font-weight: bold;
-  padding: 25px 0;
+  padding: 15px 0;
   padding-left: 85px;
+  padding-bottom: 0;
 }
 .making-process__video {
   text-align: center;
   position: relative;
-}
-.making-process__video::after {
-  content: " ";
-  position: absolute;
-  width: 101px;
-  height: 77px;
-  background-image: url(../img/play.svg);
-  top: 50%;
-  left: 50%;
-  margin-left: -50px;
-  margin-top: -38.5px;
 }
 .making-process__content {
   font-family: 'Open Sans', sans-serif;
@@ -1095,22 +1130,32 @@ display:inline-block;
   margin-bottom: 25px;
 }
 .making-process .btn {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 35px;
 }
 @media (min-width: 768px) {
+  .only-mobile-visible {
+    display: none;
+  }
+  .only-mobile-hidden {
+    display: block;
+  }
   .making-process {
     display: flex;
     flex-direction: column;
+    width: 668px;
   }
   .making-process__video {
-    order: -1;
+    order: -2;
     width: 100%;
     min-height: 455px;
+    padding: 0;
   }
   .making-process__title {
     padding-left: 110px;
+    order: 2;
+    padding-bottom: 15px;
   }
   .making-process__content {
     padding: 0 40px;
@@ -1123,6 +1168,7 @@ display:inline-block;
 }
 @media (min-width: 1050px) {
   .making-process {
+    width: 1050px;
     flex-direction: row;
   }
   .only-desktop-hidden {

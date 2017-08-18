@@ -10,7 +10,13 @@
   <body>
     <header class="page-header">
       <nav class="main-nav  main-nav--closed">
-         <div class="main-nav__logo"><a class="site-logo active"><img src="img/mishka-logo-mobile.svg" alt=""></a><span class="main-nav__menu-closer"></span></div>
+         <div class="main-nav__logo"><a class="site-logo active">
+           <picture>
+             <source media="(min-width: 1200px)" srcset="img/mishka-logo-desktop.svg">
+               <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+             <img src="img/mishka-logo-mobile.svg" alt="mishka logo">
+           </picture>
+         </a><span class="main-nav__menu-closer"></span></div>
        <div class="group-1">
          <div class="main-nav__list__item"><a href="#">Каталог товаров</a></div>
          <div class="main-nav__list__item"><a href="#">Вязание на заказ</a></div>
@@ -34,7 +40,13 @@
     <main>
       <div class="product-list">
         <article class="product-article">
-          <div class="product-article__photo"><img src="img/rabbit-mobile.jpg" alt="Зайчик-попрыгайчик"></div>
+          <div class="product-article__photo">
+            <picture>
+              <source  media="(min-width:1050px)" srcset="img/rabbit-desktop.jpg">
+                <source media="(min-width:768px)" srcset="img/rabbit-tablet.jpg">
+                <img src="img/rabbit-mobile.jpg" alt="Зайчик-попрыгайчик">
+            </picture>
+          </div>
           <div class="product-article__content-wrapper">
           <h2 class="product-article__title">Зайчик-попрыгайчик</h2>
           <span class="product-article__description">Рост 30 см, вес 200 г</span><br>
@@ -42,7 +54,13 @@
         </div>
         </article>
         <article class="product-article">
-          <div class="product-article__photo"><img src="img/basket-mobile.jpg" alt="Корзинка для белья"></div>
+          <div class="product-article__photo">
+            <picture>
+              <source  media="(min-width:1050px)" srcset="img/basket-desktop.jpg">
+                <source media="(min-width:768px)" srcset="img/basket-tablet.jpg">
+                  <img src="img/basket-mobile.jpg" alt="Корзинка для белья">
+            </picture>
+          </div>
           <div class="product-article__content-wrapper">
           <h2 class="product-article__title">Корзинка для белья</h2>
             <span class="product-article__description">Диаметр 15 см, высота 10 см</span> <br>
@@ -50,30 +68,47 @@
           </div>
         </article>
         <article class="product-article">
-          <div class="product-article__photo"><img src="img/bigbasket-mobile.jpg" alt="Большая корзинка для игрушек"></div>
+          <div class="product-article__photo">
+            <picture>
+              <source  media="(min-width:1050px)" srcset="img/bigbasket-desktop.jpg">
+                <source media="(min-width:768px)" srcset="img/bigbasket-tablet.jpg">
+                  <img src="img/bigbasket-mobile.jpg" alt="Большая корзинка для игрушек">
+            </picture>
+          </div>
           <div class="product-article__content-wrapper">
           <h2 class="product-article__title">Большая корзинка<br class="mobile-hidden"> для игрушек</h2>
-          <span class="product-article__description">Диаметри 30 см, высота 30 см</span><br>
+          <span class="product-article__description">Диаметр 30 см, высота 30 см</span><br>
           <a href="#" class="product-article__price">1 500 руб.</a>
         </div>
         </article>
         </div>
       <div class="making-process">
-        <div class="making-process__video  only-desktop-visible">
-        <video src="#" poster="img/video-mobile.svg">
-        </video>
+        <div class="making-process__video only-mobile-hidden">
+          <a href="#" class="video">
+            <picture>
+                <source media="(min-width:1050px)" srcset="img/video-desktop.jpg">
+                <source media="(min-width:768px)" srcset="img/video-tablet.jpg">
+              <img src="img/video-mobile.jpg" alt="Видео">
+            </picture>
+          </a>
         </div>
         <div class="making-process__content-wrapper">
         <h2 class="making-process__title">Процесс производства</h2>
-        <div class="making-process__video  only-desktop-hidden">
-        <video src="#" poster="img/video-mobile.svg">
-        </video>
+        <div class="making-process__video only-mobile-visible">
+          <a href="#" class="video">
+            <picture>
+                <source media="(min-width:1050px)" srcset="img/video-desktop.jpg">
+                <source media="(min-width:768px)" srcset="img/video-tablet.jpg">
+              <img src="img/video-mobile.jpg" alt="Видео">
+            </picture>
+          </a>
         </div>
         <p class="making-process__content">
           По просьбам наших любимых фоловверов мы сняли для вас подробное видео о том, как появляются наши товары
         </p>
         <a href="#" class="btn">Сделать заказ</a>
         </div>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="site-logo site-logo--mobile-hidden" width="86" height="35"></div>

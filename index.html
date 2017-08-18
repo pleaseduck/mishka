@@ -10,7 +10,13 @@
   <body>
    <header class="page-header">
        <nav class="main-nav  main-nav--closed">
-          <div class="main-nav__logo"><a class="site-logo active"><img src="img/mishka-logo-mobile.svg" alt=""></a><span class="main-nav__menu-closer"></span></div>
+          <div class="main-nav__logo"><a class="site-logo active">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/mishka-logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+              <img src="img/mishka-logo-mobile.svg" alt="mishka logo">
+            </picture>
+          </a><span class="main-nav__menu-closer"></span></div>
         <div class="group-1">
           <div class="main-nav__list__item"><a href="#">Каталог товаров</a></div>
           <div class="main-nav__list__item"><a href="#">Вязание на заказ</a></div>
@@ -63,8 +69,13 @@
          <a href="#" class="btn">Заказать</a>
        </div>
        </div>
-         <img class="desktop-hidden" src="img/triple-set-mobile.png" alt="Вязаные корзинки"><a href="#"></a></img>
-         <img class="mobile-hidden" src="img/triple-set-desktop.jpg" alt="Вязаные корзинки"><a href="#"></a></img>
+       <a href="#" class="special-offer__image">
+         <picture>
+           <source media="(min-width:1050px)" srcset="img/triple-set-desktop.jpg">
+           <source media="(min-width:768px)" srcset="img/triple-set-tablet.jpg">
+           <img  src="img/triple-set-mobile.png" alt="Вязаные корзинки">
+         </picture>
+         </a>
          <div class="desktop-hidden">
          <span class="special-offer__price">Цена: 990 руб.</span>
          <a href="#" class="btn">Заказать</a>
@@ -128,7 +139,7 @@
      </div>
    </main>
    <footer class="page-footer">
-     <div class="site-logo site-logo--mobile-hidden"><img src="img/mishka-logo-mobile.svg" alt="" width="86" height="35"></div>
+     <div class="site-logo site-logo--mobile-hidden"><img src="img/logo-footer.svg" alt="" width="86" height="35"></div>
      <div class="page-footer__social">
        <a href="#" class="social social--inst" width="23" height="30">Inst</a>
        <a href="#" class="social social--fb" width="23" height="30">fb</a>

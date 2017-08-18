@@ -1,6 +1,5 @@
 .product-article {
-  width: 81%;
-  min-width: 260px;
+  width: 260px;
   margin: 0 auto;
   text-align: center;
   border: 1px solid #ededed;
@@ -30,40 +29,59 @@
   display: inline-block;
   padding: 25px 0;
   padding-right: 110px;
+  padding-left: 30px;
   min-width: 260px;
+  text-align: left;
+  position: relative;
+  &::after {
+    content: " ";
+    position: absolute;
+    height: 1px;
+    width: 200px;
+    background-color: #ededed;
+    top: 0;
+    left: 30px;
+  }
 }
 .product-article__description {
   .content-text-default;
   display:inline-block;
-   border-bottom: 1px solid #ededed;
    padding-bottom: 22px;
+   padding-left: 30px;
    text-align: left;
    min-width: 260px;
 }
 @media (min-width: 768px) {
 .product-article {
   margin: 0;
-  width: 87%;
+  width: 100%;
   text-align: left;
   display: flex;
   margin-bottom: 55px;
 }
 .product-article__content-wrapper {
   width: 50%;
+  max-height: 333px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin-left: auto;
+  padding-top:15px;
 }
 .product-article__photo {
   max-width: 334px;
   max-height: 334px;
+  margin-bottom: 0;
 }
 .product-article__description {
   border-width: 0;
 }
+.product-article__description, .product-article__title {
+  padding-left: 30px;
+}
 .product-article__price {
-  position: relative;
+  box-sizing: border-box;
+  margin-top: auto;
   &::after {
     content: " ";
     position: absolute;
@@ -71,22 +89,32 @@
     width: 80%;
     background-color: #ededed;
     top: 0;
-    left: 10%;
+    left: 30px;
   }
 }
 }
 @media (min-width:1050px) {
   .product-article {
     display: block;
-    width: 30%;
-    margin-right: 50px;
-    &:last-of-type {
-      margin-right: 0;
-    }
+    width: 316px;
+  }
+.product-article:nth-of-type(3) .product-article__description {
+    padding-bottom: 0;
+  }
+  .product-article__description, .product-article__title {
+    padding-left: 30px;
+  }
+  .product-article__photo {
+    margin-bottom: 135px;
+  }
+  .product-article__price {
+    margin-top: auto;
+    vertical-align: bottom;
   }
   .product-article__content-wrapper {
     width: 100%;
-    display: block;
-    margin-left: 50px;
+   margin-bottom: 0;
+   padding: 0;
+   justify-content: flex-end;
   }
 }

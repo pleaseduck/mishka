@@ -78,6 +78,13 @@ text-align: center;
   border-bottom:1px solid #ececec;
   padding: 12px 0;
 }
+@media (min-width: 500px) {
+  .fspecial-offer {
+    &::after {
+      height: 13px;
+    }
+  }
+}
 @media (min-width: 768px) {
   .desktop-hidden {
     display:none;
@@ -91,15 +98,14 @@ text-align: center;
     padding: 0 50px;
     padding-bottom: 45px;
     margin-bottom: 45px;
-  }
-  .special-offer {
     &::after {
       height: 21px;
       bottom:-55px;
     }
   }
+
   .special-offer br {
-    display: none;
+    display: block;
   }
   .special-offer__title {
     font-size: 40px;
@@ -114,9 +120,9 @@ text-align: center;
   }
   .special-offer__content-wrapper {
     width: 48%;
-    order:2;
+    order: 2;
   }
-  .special-offer img {
+  .special-offer__image {
     width: 333px;
     height: 397px;
     padding: 0;
@@ -126,8 +132,8 @@ text-align: center;
     flex-grow: 0;
   }
 
-.special-offer__price, .special-offer .btn {
-  order:5;
+.special-offer__price {
+  margin-bottom: 10px;
 }
 .special-offer .btn {
   width: 87%
@@ -163,6 +169,9 @@ text-align: center;
   width: 60%;
   height: 57px;
   z-index: 2
+}
+.special-offer__price {
+  margin-bottom: 5px;
 }
 .special-offer__content-wrapper {
   width: 33%;

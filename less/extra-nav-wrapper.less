@@ -2,16 +2,21 @@
   height: auto;
   background-image: url(../img/hero-mobile.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 580px) {
   .extra-nav-wrapper {
-    background-image: url(../img/hero-desktop.jpg);
+    background-image: url(../img/hero-tablet.jpg);
     background-size: cover;
     background-color: white;
   }
   .extra-nav-wrapper--catalog {
     background-color: #f1f1f1;
+  }
+}
+@media (min-width: 1050px) {
+  .extra-nav-wrapper {
+    background-image: url(../img/hero-desktop.jpg);
   }
 }

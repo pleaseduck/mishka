@@ -9,14 +9,27 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <div class="site-logo" width="86" height="35"></div>
-        <ul class="main-nav__list">
-          <li class="main-nav__list__item"><a href="#">Каталог товаров</a></li>
-          <li class="main-nav__list__item"><a href="#">Вязание на заказ</a></li>
-          <li class="main-nav__list__item  main-nav__list__item--search"><a href="#">Поиск по сайту</a></li>
-          <li class="main-nav__list__item  main-nav__list__item--basket"><a href="#" class="empty-backet">Корзина:пока пуста</a></li>
-        </ul>
+      <nav class="main-nav  main-nav--closed">
+         <div class="main-nav__logo"><a class="site-logo active">
+           <picture>
+             <source media="(min-width: 1200px)" srcset="img/mishka-logo-desktop.svg">
+               <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+             <img src="img/mishka-logo-mobile.svg" alt="mishka logo">
+           </picture>
+         </a><span class="main-nav__menu-closer"></span></div>
+       <div class="group-1">
+         <div class="main-nav__list__item"><a href="#">Каталог товаров</a></div>
+         <div class="main-nav__list__item"><a href="#">Вязание на заказ</a></div>
+       </div>
+       <div class="main-nav__list__item main-nav__list__item--mobile-hidden  group-4"><span>Бесплатная доставка по россии</span></div>
+       <div class="group-2">
+         <div class="main-nav__list__item main-nav__list__item--search"><a href="#">Поиск по сайту</a></div>
+         <div class="main-nav__list__item main-nav__list__item--basket"><a href="#" class="backet-empty">Корзина:пока пуста</a></div>
+       </div>
+       <div class="group-3">
+         <div class="main-nav__list__item  main-nav__list__item--mobile-hidden  main-nav__list__item--tablet-hidden"><a href="#">Новые поступления</a></div>
+         <div class="main-nav__list__item  main-nav__list__item--mobile-hidden  main-nav__list__item--tablet-hidden"><a href="#">Распродажа</a></div>
+       </div>
       </nav>
       <div class="extra-nav--form">
         <h2 class="extra-nav__title">Вязание на заказ</h2>
@@ -28,49 +41,90 @@
       </p>
       <form action="post" class="order-form">
         <fieldset class="order-form__type">
-          <legend>Тип</legend>
+          <div class="order-form__wrapper">
+          <div class="order-form__group-1">
+            <legend><span class="white-bg">Тип</span></legend>
+          </div>
+          <div class="order-form__group-2">
           <input type="radio" class="order-form__radio" id="radio-1">
           <label for="radio-1">Аксессуар для интерьера</label>
           <input type="radio" class="order-form__radio" id="radio-2">
           <label for="radio-2">Детская игрушка</label>
+        </div>
+      </div>
         </fieldset>
         <fieldset class="order-form__color">
-          <legend>Цвет</legend>
+            <div class="order-form__wrapper">
+          <div class="order-form__group-1">
+            <legend><span class="white-bg">Цвет</span></legend>
+          </div>
+          <div class="order-form__group-2">
           <input type="checkbox" id="check-1">
-          <label for="check-1">Белый</label>
+          <label for="check-1"><span class="white-block"></span>Белый</label>
           <input type="checkbox" id="check-2">
-          <label for="check-2">Серый</label>
+          <label for="check-2"><span class="white-block"></span>Серый</label>
           <input type="checkbox" id="check-3">
-          <label for="check-3">«Тиффани»</label>
+          <label for="check-3"><span class="white-block"></span>«Тиффани»</label>
           <input type="checkbox" id="check-4">
-          <label for="check-4">Черный</label>
+          <label for="check-4"><span class="white-block"></span>Черный</label>
           <input type="checkbox" id="check-5">
-          <label for="check-5">Розовый</label>
+          <label for="check-5"><span class="white-block"></span>Розовый</label>
           <input type="checkbox" id="check-6">
-          <label for="check-6">Оранжевый</label>
+          <label for="check-6"><span class="white-block"></span>Оранжевый</label>
+        </div>
+      </div>
         </fieldset>
         <fieldset class="order-form__initials">
-          <legend>ФИО</legend>
-          <label for="surname">Фамилия:</label>
+            <div class="order-form__wrapper">
+         <div class="order-form__group-1">
+          <legend><span class="white-bg">ФИО</span></legend>
+        </div>
+        <div class="order-form__group-2">
+          <div class="label-group">
+            <label for="surname">Фамилия:</label>
           <input type="text" placeholder="Укажите фамилию" id="surname">
+        </div>
+        <div class="label-group">
           <label for="name">Имя:</label>
           <input type="text" placeholder="Введите ваше имя" id="name">
+        </div>
+        <div class="label-group">
           <label for="patronymic">Отчество:</label>
           <input type="text" placeholder="Отчество,если желаете" id="patronymic">
+        </div>
+        </div>
+      </div>
         </fieldset>
+        <div class="communication-group">
         <fieldset class="order-form__tel">
-          <legend>Тел</legend>
+          <div class="order-form__wrapper">
+          <div class="order-form__group-1">
+            <legend><span class="white-bg">Тел</span></legend>
           <input type="tel" placeholder="+7 XXX XX XX">
+        </div>
+        </div>
         </fieldset>
         <fieldset class="order-form__mail">
-          <legend>E-mail</legend>
-          <input type="tel" placeholder="Ваш e-mail">
+            <div class="order-form__wrapper">
+          <div class="order-form__group-2">
+          <legend><span class="white-bg">E-mail</span></legend>
+          <input type="email" placeholder="Ваш e-mail">
+          </div>
+        </div>
         </fieldset>
+      </div>
         <fieldset class="order-form__extra-text">
-          <legend>Доп</legend>
-          <textarea name="Доп"  cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <div class="order-form__wrapper">
+          <div class="order-form__group-1">
+          <legend><span class="white-bg">Доп</span></legend>
+          <textarea name="Доп"  rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </div>
+      </div>
         </fieldset>
-        <input type="submit" class="btn">
+        <div class="order-form__footer">
+        <input type="submit" class="btn" value="ОТПРАВИТЬ ЗАКАЗ">
+        <span class="order-form__hint mobile-hidden">Все поля являются обязательными</span>
+      </div>
       </form>
     </main>
     <footer class="page-footer">
@@ -83,4 +137,5 @@
       <div class="design">Дизайн</div>
     </footer>
   </body>
+    <script type="text/javascript" src="js/script.js"></script>
 </html>

@@ -27,6 +27,39 @@ margin: 0;
   padding-bottom: 32px;
   text-align: center;
 }
+ .main-nav__list__item--search a, .main-nav__list__item--basket a {
+   position: relative;
+   &::after {
+     content: " ";
+     width: 25px;
+     height: 30px;
+     position: absolute;
+     top: 34px;
+     left: 30px;
+     background-image: url("../img/sprite.png");
+     background-position: 0 0;
+   }
+ }
+  .main-nav__list__item--basket a {
+     &::after {
+        background-position: -168px 0;
+     }
+  }
+ .main-nav__list__item--search a:hover {
+   &::after {
+     background-position: -58px -3.5px;
+   }
+ }
+ .main-nav__list__item--basket a:hover {
+   &::after {
+     background-position: -224px -2px;
+   }
+ }
+ .main-nav__list__item--search a:active, .main-nav__list__item--basket a:active {
+   &::after {
+     opacity: 0.3;
+   }
+ }
 .main-nav__logo {
   border: 0px solid black;
   position: relative;
@@ -84,7 +117,7 @@ color: #8d8d8d;
   .main-nav--opened .main-nav__menu-closer::before {
       transform: rotate(-45deg);
   }
-  .main-nav--closed a[href] {
+  .main-nav--closed a[href], .main-nav__list__item--search a:active {
   display:none;
   }
   .main-nav--closed {
@@ -93,7 +126,7 @@ color: #8d8d8d;
   .main-nav--opened {
     border-bottom: 0px solid #ececec;
   }
-  .main-nav--opened a[href] {
+  .main-nav--opened a[href],.main-nav__list__item--search a:active {
   display:block;
   }
   .main-nav__list__item--mobile-hidden {
@@ -141,7 +174,7 @@ color: #8d8d8d;
     .group-2 .main-nav__list__item {
       border-left:1px solid #ececec;
     }
-    .group-2 .main-nav__list__item:last-of-type {
+    .group-2 .main-nav__list__item a:last-of-type {
       padding-left:80px;
     }
   .group-4 {

@@ -59,6 +59,7 @@ margin-bottom:60px;
   padding-left: 63px;
   margin-bottom: 40px;
   position: relative;
+
 }
 .order-form label:last-of-type {
   margin-bottom:35px;
@@ -79,7 +80,16 @@ margin-bottom:60px;
   left:0;
   top:-12px;
 }
-
+.order-form input[type="radio"] + label:hover {
+  &::before {
+    border-color: #62d1ba;
+  }
+}
+.order-form input[type="radio"] + label:active {
+  &::before {
+    border-color: #e0e0e0;
+  }
+}
 .order-form input[type="radio"]:checked + label::after {
   content:  " ";
   width: 16px;
@@ -119,6 +129,12 @@ margin-bottom:60px;
   left: 10.5px;
   top: 12px;
 }
+.order-form input[type="checkbox"] +label:hover > .white-block {
+  border-color: #62d1ba;
+}
+.order-form input[type="checkbox"] +label:active > .white-block {
+  border-color: #e0e0e0;
+}
 .order-form__initials label {
   margin-bottom: 10px;
   padding-left:  0;
@@ -130,9 +146,30 @@ margin-bottom:60px;
   border-width: 0;
   border-bottom: 2px solid black;
   margin-bottom: 15px;
+  &:hover {
+    border-width: 0;
+    border-bottom: 2px solid #62d1ba;
+  }
+  &:active {
+    border-bottom: 2px solid #62d1ba;
+  }
+  &:focus {
+    border-width: 0;
+    border-bottom: 2px solid #62d1ba;
+    outline:none;
+  }
 }
 .order-form__extra-text textarea {
   width: 100%;
+  &:hover {
+    border: 2px solid #62d1ba;
+  }
+  &:active {
+    bottom: 2px solid #62d1ba;
+  }
+  &:focus {
+    outline:none;
+  }
 }
 
 .order-form .btn {

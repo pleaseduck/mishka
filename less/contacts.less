@@ -18,7 +18,7 @@
   margin-bottom: 30px;
 }
 .contacts__info a {
-  color:@grey-for-text;
+  color: @grey-for-text;
   display: inline-block;
   text-decoration: none;
   position: relative;
@@ -30,6 +30,18 @@
     background-color: #62d1ba;
     bottom:0;
     left:0;
+  }
+  &:hover {
+    color: #46c1ae;
+    &::after {
+      background-color: #46c1ae;
+    }
+  }
+  &:active {
+    color: #c7ece7;
+    &::after {
+      background-color: #ecf9f7;
+    }
   }
 }
 .contacts__info tr {

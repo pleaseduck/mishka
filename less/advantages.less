@@ -13,12 +13,59 @@
  font-weight: bold;
  padding:60px 0;
  padding-bottom: 30px;
+ position: relative;
+ &::after {
+   content: " ";
+   width: 60px;
+   height: 62px;
+   position: absolute;
+   top: 60px;
+   right: 40px;
+   background-image: url("../img/sprite.png");
+   top: -20px;
+   left: 0;
+ }
+&--ecology {
+  &::after {
+    background-position: 0 -89px;
+    left: 8px;
+  }
+}
+&--russian-price {
+  &::after {
+    background-position: -68px -80px;
+  }
+}
+&--more-likes {
+  &::after {
+    background-position: -149px -80px;
+    left: 8px;
+  }
+}
+&--with-soul {
+  &::after {
+    background-position: -217px -86px;
+  }
+}
+&--patriotism {
+  &::after {
+      background-position: -287px -75px;
+      left: -8px;
+  }
+}
+&--gift {
+  &::after {
+      background-position: -365px -84px;
+      left: 4px;
+  }
+}
 }
 @media (min-width: 768px) {
   .advantages {
     display: flex;
     flex-wrap: wrap;
     margin-top: 85px;
+    justify-content: space-between;
   }
   .advantages__title {
       margin-bottom: 50px;

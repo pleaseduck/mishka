@@ -18,6 +18,18 @@
   padding: 15px 0;
   padding-left: 85px;
   padding-bottom:0;
+  position: relative;
+  &::after {
+    content: " ";
+    width: 35px;
+    height: 25px;
+    position: absolute;
+    top:50%;
+    margin-top: -12.5px;
+    left: 35px;
+    background-image: url("../img/sprite.png");
+    background-position: -287px -50px;
+  }
 }
 .making-process__video {
   text-align: center;

@@ -62,6 +62,17 @@
   font-size: 40px;
   line-height: 50px;
   margin-bottom: 55px;
+  position: relative;
+  &::after {
+    content: " ";
+    width: 54px;
+    height: 83px;
+    position: absolute;
+    top: -25px;
+    right: 50px;
+    background-image: url("../img/sprite.png");
+    background-position: 54.3px -7px;
+  }
 }
 .contacts__info {
   margin-bottom: 60px;
@@ -95,6 +106,10 @@
     max-height: 50px;
     padding-left: 0;
     margin-top: 82px;
+    &::after {
+      top: -25px;
+      left: -100px;
+    }
   }
   .contacts__content-wrapper {
     order: -2;

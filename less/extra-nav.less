@@ -2,6 +2,7 @@
 .extra-nav {
   padding-top:90px;
 }
+
 .extra-nav__title {
   .title-default;
   box-sizing: border-box;
@@ -18,13 +19,53 @@
   color: white;
   padding: 30px;
   font-weight: bold;
-
+  position: relative;
+  display: block;
+    text-decoration: none;
+  &::after {
+    content: " ";
+    width: 60px;
+    height: 62px;
+    position: absolute;
+    top: 23px;
+    right: 25px;
+  }
 }
 .extra-nav__item--interior {
   background-color: #63d1bb;
+  &::after {
+    background-image: url("../img/sprite.png");
+    background-position: -370px 0;
+  }
+  &:hover {
+    &::after {
+      background-position: -483px 0;
+    }
+  }
+  &:active {
+    &::after {
+      background-position: -596px -3px;
+    }
+  }
 }
+
 .extra-nav__item--toys {
   background-color: #56c3b2;
+  &::after {
+    background-image: url("../img/sprite.png");
+    background-position: -720px 0;
+
+  }
+  &:hover {
+    &::after {
+      background-position: -833.5px -0.5px;
+    }
+  }
+  &:active {
+    &::after {
+      background-position: -948px -0.8px;
+    }
+  }
 }
 .extra-nav--catalog, .extra-nav--form {
   background-color: #f1f1f1;
@@ -73,7 +114,7 @@
   .extra-nav__item {
     width:50%;
     box-sizing: border-box;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
 }
 }
 @media (min-width: 1050px) {

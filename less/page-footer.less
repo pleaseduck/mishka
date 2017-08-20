@@ -1,6 +1,4 @@
-.site-logo--mobile-hidden {
-  display: none;
-}
+
 .page-footer__social {
   display:flex;
   justify-content: center;
@@ -10,7 +8,53 @@
   background-color: #f1f1f1;
   border-bottom: 1px solid #e5e5e5;
 }
+
+.social--inst {
+  font-size: 0;
+  background-image: url("../img/sprite.png");
+  background-position: -456px -110px;
+  &:hover {
+    background-position: -506px -110px;
+  }
+  &:active {
+    background-position: -506px -110px;
+    opacity: 0.3;
+  }
+}
+.social--fb {
+  font-size: 0;
+  background-image: url("../img/sprite.png");
+  background-position: -600px -112px;
+  position: relative;
+  top: -6px;
+  &:hover {
+    background-position: -649px -112px;
+  }
+  &:active {
+      background-position: -649px -112px;
+    opacity: 0.3;
+  }
+}
+.social--twitter {
+  font-size: 0;
+  background-image: url("../img/sprite.png");
+  background-position: -734px -112px;
+  &:hover {
+    background-position: -781px -111px;
+  }
+  &:active {
+    background-position: -781px -111px;
+    opacity: 0.3;
+  }
+}
 .design {
+  text-decoration: none;
+  color: black;
+  font-family: Verdana;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  display: block;
   width:100%;
   min-height: 80px;
   box-sizing: border-box;
@@ -18,21 +62,65 @@
   text-align: center;
   background-color: #f1f1f1;
   padding-top:35px;
+  position: relative;
+}
+.design span {
+  display: inline-block;
+  position: relative;
+  &::after {
+    content: " ";
+    width: 28px;
+    height:36px;
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    right: -50px;
+     background-image: url("../img/sprite.png");
+     background-position: 0 -48px;
+  }
+}
+.design:hover span {
+  &::after {
+    background-position: -55px -48px;
+  }
+}
+.design:active span {
+  &::after {
+    background-position: -55px -48px;
+    opacity: 0.3;
+  }
 }
 @media (min-width: 768px) {
   .site-logo--mobile-hidden {
     display: inline-block;
     width: 34%;
   }
+  .page-footer .site-logo {
+    display: block;
+    width: 107px;
+    height: 35px;
+    background-image: url("../img/sprite.png");
+    background-position:-7px -167px;
+    &:hover {
+      background-position: -152px -167px;
+    }
+    &:active {
+      background-position: -152px -167px;
+      opacity: 0.3;
+    }
+  }
   .page-footer {
     display:flex;
     padding:20px 50px;
     background-color: #f1f1f1;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
   }
   .design {
   width: 24%;
+  &::after {
+    right: -15px;
+  }
   }
   .page-footer__social {
     width: 42%;

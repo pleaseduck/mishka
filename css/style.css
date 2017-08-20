@@ -1795,7 +1795,10 @@ display:inline-block;
   .making-process__title {
     padding-left: 60px;
     padding-right: 35px;
-    margin-top: 100px;
+    padding-top: 100px;
+  }
+  .making-process__title::after {
+    left: 61px;
   }
   .making-process__content {
     padding: 0 60px;

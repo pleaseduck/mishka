@@ -146,20 +146,38 @@ margin-bottom:60px;
     background-color: #444444;
   }
 }
-input[type="tel"] {
+.order-form__footer {
+  margin-left: 8%;
+}
+.order-form__tel {
   position: relative;
-  background-color: red;
   &::after {
     content: " ";
     width: 39px;
     height: 25px;
     position: absolute;
-    margin-top: -12.5px;
+    top: 50%;
+    margin-top: -5px;
     right: 40px;
     background-image: url("../img/sprite.png");
     background-position: -160px -48px;
   }
 }
+.order-form__mail {
+  position: relative;
+  &::after {
+    content: " ";
+    width: 39px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    right: 38px;
+    background-image: url("../img/sprite.png");
+    background-position: -333px -48px;
+  }
+}
+
 @media (min-width:768px) {
   .order-form__wrapper {
     max-width: 1050px;
@@ -250,6 +268,8 @@ input[type="tel"] {
     .communication-group {
       display: flex;
       flex-direction: column;
+      padding-top:70px;
+      background-color: #f1f1f1;
     }
     .communication-group .order-form__tel span, .communication-group input {
       background-color: #f1f1f1;
@@ -266,31 +286,41 @@ input[type="tel"] {
     flex-wrap: nowrap;
     width:100%;
   }
-  .order-form .order-form__tel {
-    margin-bottom: 0;
-    background-color: #f1f1f1;
+
+  .order-form__tel .order-form__group-1 {
     position: relative;
-    z-index: 10;
-    padding-top: 65px;
-    padding-bottom: 0;
     &::after {
       content: " ";
       width: 39px;
       height: 25px;
       position: absolute;
-      top: 50%;
-      margin-top: -12.5px;
-      right: 40px;
+      top: 0;
+      right: 8%;
       background-image: url("../img/sprite.png");
       background-position: -160px -48px;
     }
   }
+  .order-form__tel {
+    position: relative;
+    z-index: 2;
+  }
   .order-form .order-form__mail {
-    padding-top: 0;
-    margin-top: -30px;
+    margin-top: -110px;
     position: relative;
     z-index: 1;
-    padding-bottom: 70px;
+  }
+  .order-form__mail .order-form__group-2 {
+    position: relative;
+    &::after {
+      content: " ";
+      width: 39px;
+      height: 25px;
+      position: absolute;
+      top: 0;
+      right: 8%;
+      background-image: url("../img/sprite.png");
+      background-position: -333px -48px;
+    }
   }
   .order-form .order-form__tel input, .order-form .order-form__mail input {
     width: 78%;
@@ -322,8 +352,9 @@ input[type="tel"] {
   max-width: 700px;
   box-sizing: border-box;
   margin: 0 auto;
-  margin-left: 31%;
+  margin-left: 28%;
   align-items: baseline;
+
 }
 .order-form__footer .btn {
   width: 30%;
@@ -333,11 +364,49 @@ input[type="tel"] {
   text-align: right;
 }
 }
+@media (min-width:1008px) {
+  .order-form__tel .order-form__group-1, .order-form__mail .order-form__group-2 {
+    &::after {
+      right: 9%;
+    }
+  }
+  .order-form__footer {
+    margin-left: 27%;
+  }
+}
+@media (min-width: 1030px) {
+  .order-form__tel .order-form__group-1, .order-form__mail .order-form__group-2 {
+    &::after {
+      right: 10%;
+    }
+    .order-form__footer {
+      margin-left: 26%;
+    }
+}
+}
 @media (min-width: 1050px) {
   .order-form__color .order-form__group-2 label {
     max-width: 25%;
   }
   .order-form__description {
     padding-left: 282px;
+  }
+  .order-form__tel .order-form__group-1, .order-form__mail .order-form__group-2 {
+    &::after {
+      right: 12%;
+    }
+}
+.order-form__footer {
+  margin-left: 28%;
+}
+}
+@media (min-width: 1100px) {
+  .order-form__footer {
+    margin-left: 29%;
+  }
+}
+@media (min-width: 1050px) {
+  .order-form__footer {
+    margin-left: 30%;
   }
 }

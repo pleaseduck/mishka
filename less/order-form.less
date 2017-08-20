@@ -20,7 +20,6 @@ margin-bottom:60px;
 .order-form fieldset {
   border: none;
   width: 100%;
-  padding-bottom: 70px;
 }
 .order-form legend {
   color: #62d1ba;
@@ -147,6 +146,20 @@ margin-bottom:60px;
     background-color: #444444;
   }
 }
+input[type="tel"] {
+  position: relative;
+  background-color: red;
+  &::after {
+    content: " ";
+    width: 39px;
+    height: 25px;
+    position: absolute;
+    margin-top: -12.5px;
+    right: 40px;
+    background-image: url("../img/sprite.png");
+    background-position: -160px -48px;
+  }
+}
 @media (min-width:768px) {
   .order-form__wrapper {
     max-width: 1050px;
@@ -171,6 +184,7 @@ margin-bottom:60px;
     margin-bottom: 50px;
     width: 100%;
     padding: 0 50px;
+
   }
   .order-form .order-form__color {
     padding-bottom: 70px;
@@ -259,6 +273,17 @@ margin-bottom:60px;
     z-index: 10;
     padding-top: 65px;
     padding-bottom: 0;
+    &::after {
+      content: " ";
+      width: 39px;
+      height: 25px;
+      position: absolute;
+      top: 50%;
+      margin-top: -12.5px;
+      right: 40px;
+      background-image: url("../img/sprite.png");
+      background-position: -160px -48px;
+    }
   }
   .order-form .order-form__mail {
     padding-top: 0;

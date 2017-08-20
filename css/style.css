@@ -1370,7 +1370,6 @@ display:inline-block;
 .order-form fieldset {
   border: none;
   width: 100%;
-  padding-bottom: 70px;
 }
 .order-form legend {
   color: #62d1ba;
@@ -1498,6 +1497,20 @@ display:inline-block;
 .order-form .btn:hover {
   background-color: #444444;
 }
+input[type="tel"] {
+  position: relative;
+  background-color: red;
+}
+input[type="tel"]::after {
+  content: " ";
+  width: 39px;
+  height: 25px;
+  position: absolute;
+  margin-top: -12.5px;
+  right: 40px;
+  background-image: url("../img/sprite.png");
+  background-position: -160px -48px;
+}
 @media (min-width: 768px) {
   .order-form__wrapper {
     max-width: 1050px;
@@ -1614,6 +1627,17 @@ display:inline-block;
     z-index: 10;
     padding-top: 65px;
     padding-bottom: 0;
+  }
+  .order-form .order-form__tel::after {
+    content: " ";
+    width: 39px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    margin-top: -12.5px;
+    right: 40px;
+    background-image: url("../img/sprite.png");
+    background-position: -160px -48px;
   }
   .order-form .order-form__mail {
     padding-top: 0;

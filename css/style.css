@@ -1904,7 +1904,7 @@ display:inline-block;
     z-index: 1;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .main-nav__menu-closer {
     position: absolute;
     width: 21px;
